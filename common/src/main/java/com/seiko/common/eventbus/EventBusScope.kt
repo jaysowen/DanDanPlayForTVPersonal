@@ -12,17 +12,6 @@ import java.util.concurrent.atomic.AtomicBoolean
 
 object EventBusScope {
 
-    /**
-     * 全局
-     */
-    fun getDefault(): EventBus {
-        return Holder.INSTANCE
-    }
-
-    private object Holder {
-        val INSTANCE = EventBus()
-    }
-
 //    private val isInitialized = AtomicBoolean(false)
 //
 //    private val eventScopePool by lazy { ConcurrentHashMap<Activity, LazyEventBusInstance>() }
@@ -81,7 +70,18 @@ object EventBusScope {
 //        val lazyEventBusInstance = eventScopePool[activity] ?: return Holder.INSTANCE
 //        return lazyEventBusInstance.getInstance()
 //    }
-//
+
+    /**
+     * 全局
+     */
+    fun getDefault(): EventBus {
+        return Holder.INSTANCE
+    }
+
+    private object Holder {
+        val INSTANCE = EventBus()
+    }
+
 //    class LazyEventBusInstance {
 //
 //        private object Holder {

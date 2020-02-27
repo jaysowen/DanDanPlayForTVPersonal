@@ -2,25 +2,25 @@ package com.seiko.player.util.diff
 
 import android.os.Bundle
 import androidx.leanback.widget.DiffCallback
-import com.seiko.player.data.model.PlayOption
+import com.seiko.player.data.model.PlayerOption
 
-class PlayOptionDiffCallback : DiffCallback<PlayOption>() {
+class PlayerOptionDiffCallback : DiffCallback<PlayerOption>() {
 
     companion object {
         const val ARGS_OPTION_ICON = "ARGS_OPTION_ICON"
         const val ARGS_OPTION_TITLE = "ARGS_OPTION_TITLE"
     }
 
-    override fun areItemsTheSame(oldItem: PlayOption, newItem: PlayOption): Boolean {
+    override fun areItemsTheSame(oldItem: PlayerOption, newItem: PlayerOption): Boolean {
         return oldItem.id == newItem.id
     }
 
-    override fun areContentsTheSame(oldItem: PlayOption, newItem: PlayOption): Boolean {
+    override fun areContentsTheSame(oldItem: PlayerOption, newItem: PlayerOption): Boolean {
         return oldItem.icon == newItem.icon
                 && oldItem.title == newItem.title
     }
 
-    override fun getChangePayload(oldItem: PlayOption, newItem: PlayOption): Any? {
+    override fun getChangePayload(oldItem: PlayerOption, newItem: PlayerOption): Any? {
         val bundle = Bundle()
         if (oldItem.icon != newItem.icon) {
             bundle.putInt(ARGS_OPTION_ICON, newItem.icon)

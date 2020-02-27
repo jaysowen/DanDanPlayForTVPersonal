@@ -34,6 +34,7 @@ object Routes {
 
         const val ARGS_VIDEO_URI = "videoUri"
         const val ARGS_VIDEO_TITLE = "videoTitle"
+        const val ARGS_VIDEO_HASH = "hash"
     }
 
     /**
@@ -41,7 +42,7 @@ object Routes {
      */
     object Service {
         const val TORRENT_INFO = "/torrent/service"
-        const val APP_TV_INFO = "/app_tv/service"
+        const val APP_TV_INFO = "/apptv/service"
     }
 
 

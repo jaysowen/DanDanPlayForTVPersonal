@@ -4,6 +4,7 @@ import android.os.Handler
 import android.os.Looper
 import android.os.Message
 import android.view.ViewConfiguration
+import com.seiko.player.data.model.PlayerOption
 import java.lang.ref.WeakReference
 
 
